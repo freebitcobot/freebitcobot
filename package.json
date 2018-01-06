@@ -1,0 +1,28 @@
+{
+  "name": "FreeBitcoBot",
+  "version": "0.1.1",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder -m",
+    "dist:win32": "yarn compile && electron-builder --win --ia32",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "build": {
+    "appId": "com.bot.app"
+  },
+  "dependencies": {
+    "2captcha": "^1.0.11",
+    "electron-notify": "^0.1.0",
+    "robotjs": "^0.4.7",
+    "source-map-support": "^0.5.0"
+  },
+  "devDependencies": {
+    "electron-rebuild": "^1.6.0",
+    "electron": "1.7.9",
+    "electron-builder": "^19.42.1",
+    "electron-webpack": "1.10.1",
+    "webpack": "^3.8.1"
+  }
+}

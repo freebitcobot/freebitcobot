@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>HashFlare</title>
+    <style>
+      @import "compass/css3";
+
+      body {
+        overflow:hidden;
+        width: 100%; height: 100%; padding: 0; margin: 0;
+      }
+      div {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-color: #ccc;
+        top: 45%;
+        border-radius: 50%;
+      }
+
+      div:nth-child(1) {
+        background-color: #FF5460;
+        animation: move 2s infinite cubic-bezier(.2,.64,.81,.23);
+      }
+      div:nth-child(2) {
+        background-color: #FF9D84;
+        animation: move 2s 150ms infinite cubic-bezier(.2,.64,.81,.23);
+      }
+      div:nth-child(3) {
+        background-color: #F0E797;
+        animation: move 2s 300ms infinite cubic-bezier(.2,.64,.81,.23);
+      }
+      div:nth-child(4) {
+        background-color: #75B08A;
+        animation: move 2s 450ms infinite cubic-bezier(.2,.64,.81,.23);
+      }
+
+
+      @keyframes move {
+        0% {left: 0%;}
+        100% {left:100%;}
+      }
+
+      img.rot {
+        animation: 1s linear 0s normal none infinite running rot;
+        -webkit-animation: 1s linear 0s normal none infinite running rot;
+        width: 100px;
+      }
+      @keyframes rot {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes rot {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+  <img class="rot" style="display: block; width: 200px; height: 200px; position: absolute; top: 0; left: 0; z-index: -1;" src="static/images/bitcoin.png">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111923523-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111923523-1');
+  </script>
+
+  </body>
+</html>
